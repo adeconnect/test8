@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="CSS/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header> 
+    <nav id = 'navHeader'  class="navbar navbar-expand-lg navbar-dark bg-primary">
+        
+            <a class="navbar-brand" href="index.html" active> Projcet Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Projects" aria-label="Search" name="searchForm">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="createproject.html">Submit <span class="sr-only">(current)</span></a>
+                    </li>
+        
+                  </ul>
+                  <ul id = 'logOut' class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Sign up</a>
+                      </li> 
+                      <li class="nav-item">
+                          <a class="nav-link" href="login.html">Login</a>
+                        </li> 
+                  </ul>
+            </div>
+    
+        
+    </nav>
+</header>
+
+  <main>
+    <div class="mx-auto w-50 p-3 ">
+      <h4> Submit Project </h4>
+
+      <form id="createProjectForm">
+        <div class='alert alert-danger' id='error-alert'></div>
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="projectname">Project Name</label>
+            <input id= "name" type="text" name="name" class="form-control" placeholder="First name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Project Abstarct</label>
+          <textarea id= "abstract" name="abstract" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="authors">Author(s)</label>
+            <input id ="authors" type="text" name="authors" class="form-control"
+              placeholder="Enter author names (seperated by comma)">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="tags">Tag(s)</label>
+            <input id ='tags' type="text" name="tags" class="form-control"
+              placeholder="Use # to tag project with different topics (e.g #javascript #mongodb)">
+          </div>
+        </div>
+        <button id = "submit-project" type="submit" class="btn btn-primary">Continue</button>
+    
+    </form>
+    </div>
+
+
+  </main>
+  <footer>
+    <div class="container">
+      <div class="p-3 mb-2 bg-light text-dark text-right">Project Explorer &copy; 2020 <b>Edconnect</b></div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
